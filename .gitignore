@@ -1,0 +1,43 @@
+# Unity generated #
+# =============== #
+Temp/
+Obj/
+UnityGenerated/
+Library/
+project2/Library/CurrentLayout.dwlt
+ 
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+ 
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# ====================== #
+# Don't ignore InControl #
+# ====================== #
+!project2/Assets/InControl/Library
+!project2/Assets/InControl/Library/
+project2/Assets/InControl/Library/VersionInfo.cs
+project2/Assets/InControl/Library/VersionInfo.cs.meta
+project2/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll
+project2/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll.meta
