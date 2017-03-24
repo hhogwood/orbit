@@ -34,7 +34,7 @@ public class InputOverlord : MonoBehaviour
                 Overlord.instance.CBO.AddBody(planet);
                 float scale = Mathf.Clamp((float)Overlord.instance.Random.NextDouble() * .3f, .1f, .3f);
                 planet.transform.localScale = new Vector3(scale, scale, 1);
-                planet.transform.rigidbody2D.mass *= scale;
+                planet.transform.GetComponent<Rigidbody2D>().mass *= scale;
             }
 
             else if (Input.GetMouseButtonUp(0))
@@ -42,8 +42,8 @@ public class InputOverlord : MonoBehaviour
                 line.SetPosition(0, Vector3.zero);
                 line.SetPosition(1, Vector3.zero);
                 planet.GetComponent<CelestialBody>().Active = true;
-                planet.rigidbody2D.AddForce(AimVector * 10);
-                planet.audio.Play();
+                planet.GetComponent<Rigidbody2D>().AddForce(AimVector * 10);
+                planet.GetComponent<AudioSource>().Play();
                 planet = null;
             }
 

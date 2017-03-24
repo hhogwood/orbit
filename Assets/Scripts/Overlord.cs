@@ -62,8 +62,8 @@ public class Overlord : MonoBehaviour
         Sun = GameObject.Instantiate(SunPrefab) as GameObject;
         Sun.transform.position = new Vector3(0, 0, 0);
 
-        audio.volume = 0f;
-        audio.Play();
+        GetComponent<AudioSource>().volume = 0f;
+        GetComponent<AudioSource>().Play();
 
 
 
@@ -87,14 +87,14 @@ public class Overlord : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (audio.isPlaying && AudioListener.volume < .8f)
+        if (GetComponent<AudioSource>().isPlaying && AudioListener.volume < .8f)
         {
             AudioListener.volume += .001f;
         }
 
-        if (audio.isPlaying && audio.volume < .5f)
+        if (GetComponent<AudioSource>().isPlaying && GetComponent<AudioSource>().volume < .5f)
         {
-            audio.volume += .001f;
+            GetComponent<AudioSource>().volume += .001f;
         }
 
         CBO.Update();

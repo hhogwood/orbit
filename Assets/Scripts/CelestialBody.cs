@@ -39,7 +39,7 @@ public class CelestialBody : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color = colors[Overlord.instance.Random.Next(0, colors.Count)];
 
         Note = Overlord.instance.Random.Next(0, 9);
-        audio.clip = Overlord.instance.Notes[Note];
+        GetComponent<AudioSource>().clip = Overlord.instance.Notes[Note];
         deathSound.clip = Overlord.instance.Notes[Note+10];
         //audio.Play();
 	}
@@ -58,9 +58,9 @@ public class CelestialBody : MonoBehaviour
             dist.Normalize();
 
             double G = 6.674f * (10 ^ 11);
-            float force = ((float)G * this.rigidbody2D.mass * Overlord.instance.Sun.rigidbody2D.mass) / (r * r);
+            float force = ((float)G * this.GetComponent<Rigidbody2D>().mass * Overlord.instance.Sun.GetComponent<Rigidbody2D>().mass) / (r * r);
 
-            rigidbody2D.AddForce(dist * force);
+            GetComponent<Rigidbody2D>().AddForce(dist * force);
         }
     }
 

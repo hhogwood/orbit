@@ -21,7 +21,7 @@ public class SunScript : MonoBehaviour
             colorInt = 0;
         }
 
-        renderer.material.color = HSVColor.HSVToRGB(colorInt, .4f, 1f);
+        GetComponent<Renderer>().material.color = HSVColor.HSVToRGB(colorInt, .4f, 1f);
 
 
 

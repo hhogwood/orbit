@@ -19,7 +19,7 @@ public class CelestialBodyOverlord : MonoBehaviour
                 if (Overlord.instance.Bodies[i] != Overlord.instance.Bodies[k])
                 {
                     //Debug.Log("apply gravity");
-                    ApplyGravity(Overlord.instance.Bodies[i].rigidbody2D, Overlord.instance.Bodies[k].rigidbody2D);
+                    ApplyGravity(Overlord.instance.Bodies[i].GetComponent<Rigidbody2D>(), Overlord.instance.Bodies[k].GetComponent<Rigidbody2D>());
                 }
             }
         }
